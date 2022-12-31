@@ -1,9 +1,8 @@
 enum class Nivel { BASICO, INTERMEDIARIO, AVANCADO }
 
-data class Usuario (val nomeAluno: String, val matriculaAluno: String)
+data class Usuario (val nomeAluno: String, val matriculaAluno: String, val email: String)
    
-
-data class ConteudoEducacional(var nome: String, val duracao: Int = 60)
+data class ConteudoEducacional(var nome: String, val duracao: Int = 60, val nivel: Nivel)
 
 data class Formacao(val nome: String, var conteudos: List<ConteudoEducacional>) {
 
